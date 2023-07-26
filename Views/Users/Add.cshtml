@@ -1,0 +1,33 @@
+﻿@model UserMvcProject.Models.AddUserViewModel
+
+@{
+}
+
+<h1>Add User</h1>
+<form method="post" action="Add" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">FirstName</label>
+        <input type="text" class="form-control" asp-for="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">LastName</label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">City</label>
+        <input type="text" class="form-control" asp-for="City">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Country</label>
+        <input type="text" class="form-control" asp-for="Country">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Gender</label>
+        <input type="text" class="form-control" asp-for="Gender">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Status</label>
+        <input type="text" class="form-control" asp-for="Status">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

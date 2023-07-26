@@ -1,0 +1,47 @@
+﻿@model IEnumerable<UserMvcProject.Models.Domain.User>
+@{
+}
+<br /><br />
+@using (Html.BeginForm("Index","Users",FormMethod.Get))
+{
+    <div>
+
+        Search by User  @Html.TextBox("searchString")
+        <input id="Submit" type="submit" value="Filter" />
+    </div>
+}
+
+<h1>Users</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName
+                </th>
+            <th>LastName
+            </th>
+            <th>City
+            </th>
+            <th>Country</th>
+            <th>Gender</th>
+            <th>Status</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.FirstName</td>
+                <td>@user.LastName</td>
+                <td>@user.City</td>
+                <td>@user.Country</td>
+                <td>@user.Gender</td>
+                <td>@user.Status</td>
+                <td><a href="Users/view/@user.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+    </table>
